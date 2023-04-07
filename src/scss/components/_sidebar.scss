@@ -1,0 +1,132 @@
+.sidebar {
+  &__overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    background-color: #565656;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__wrapper {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 40;
+    height: 100%;
+    min-width: 280px;
+    background-color: var(--body-color);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+    @include mobile {
+      min-width: 190px;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: min-content;
+
+    @include mobile {
+      padding: 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--subtext-color);
+
+    @media (max-width: 768px) and (orientation: landscape) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 30px;
+
+    @media (max-width: 768px) and (orientation: landscape) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+
+      @media (max-width: 768px) and (orientation: landscape) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-xs);
+    color: var(--subtext-color);
+    transition: color 0.3s ease-in-out;
+
+    &--active {
+      color: var(--accent-color);
+
+      .sidebar__icon {
+        fill: var(--accent-color);
+      }
+    }
+
+    @include hover {
+      color: var(--accent-color);
+
+      .sidebar__icon {
+        fill: var(--accent-color);
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-fill-muted);
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.sidebar--active {
+  .sidebar__wrapper {
+    transform: translateX(0);
+  }
+
+  .sidebar__overlay {
+    opacity: 0.6;
+  }
+}
+
+.sidebar--visible {
+  .sidebar__wrapper {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .sidebar__overlay {
+    visibility: visible;
+  }
+}

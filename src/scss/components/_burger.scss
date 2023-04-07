@@ -1,0 +1,36 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 100%;
+  width: 56px;
+  height: 56px;
+  background-color: var(--body-color);
+  transition: border-color 0.3s ease-in-out;
+
+  &__line {
+    width: 60%;
+    height: 2px;
+    background-color: var(--icon-fill);
+    transition: background-color 0.3s ease-in-out;
+
+    &:last-child {
+      margin-top: 5px;
+    }
+  }
+
+  @include hover {
+    border-color: var(--accent-color);
+
+    .burger__line {
+      background-color: var(--accent-color);
+    }
+  }
+
+  @include small-desktop {
+    width: 42px;
+    height: 42px;
+  }
+}

@@ -1,0 +1,99 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--accent-color);
+  border-radius: var(--border-radius);
+  padding: 15px 20px;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--btn-text);
+  background-color: var(--accent-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &__icon {
+    display: block;
+    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+    fill: var(--btn-text);
+    transition: fill 0.3s ease-in-out;
+  }
+
+  @include hover {
+    color: var(--accent-color);
+    background-color: transparent;
+
+    .btn__icon {
+      fill: var(--accent-color);
+    }
+  }
+
+  @include small-desktop {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: var(--font-xl);
+  color: var(--maintext-color);
+
+  @include small-desktop {
+    font-size: 32px;
+  }
+
+  @include small-tablet {
+    font-size: 24px;
+  }
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--circle-color);
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  font-weight: 500;
+  font-size: var(--font-m);
+  text-transform: uppercase;
+  color: var(--maintext-color);
+
+  &__icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-fill);
+
+    @include small-desktop {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  @include small-desktop {
+    padding: 10px;
+    font-size: var(--font-s);
+  }
+}
+
+.colored-word {
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.descr {
+  font-weight: 400;
+  font-size: var(--font-l);
+  color: var(--subtext-color);
+
+  @include small-desktop {
+    font-size: 20px;
+  }
+
+  @include small-tablet {
+    font-size: 16px;
+  }
+}

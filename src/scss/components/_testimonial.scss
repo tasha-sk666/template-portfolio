@@ -1,0 +1,129 @@
+.testimonial {
+  padding-bottom: var(--section-offset);
+
+  &__subtitle {
+    margin-bottom: var(--title-offset);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: var(--title-offset);
+  }
+
+  &__slider {
+    .swiper-wrapper {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 100%;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    transition: border-color 0.3s ease-in-out;
+
+    @include hover {
+      border-color: var(--accent-color);
+
+      .testimonial__icon {
+        fill: var(--accent-color);
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--icon-fill);
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &__pagination {
+    width: auto;
+    color: var(--subtext-color);
+  }
+
+  .swiper-pagination-current {
+    color: var(--maintext-color);
+  }
+
+  .swiper-pagination-total {
+    color: var(--subtext-color);
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+.author {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    display: block;
+    margin-right: 10px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 18px;
+    color: var(--maintext-color);
+
+    @include small-tablet {
+      font-size: var(--font-s);
+    }
+  }
+
+  &__company {
+    margin: 0;
+    font-size: 18px;
+    color: var(--subtext-color);
+
+    @include small-tablet {
+      font-size: var(--font-xs);
+    }
+  }
+
+  &__feedback {
+    font-size: var(--font-l);
+    color: var(--maintext-color);
+
+    @include small-desktop {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: var(--font-m);
+    }
+  }
+
+  &__project {
+    text-decoration: underline;
+    color: var(--accent-color);
+  }
+}
