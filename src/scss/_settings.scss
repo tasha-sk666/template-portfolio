@@ -18,12 +18,14 @@ html {
   margin: 0;
   min-width: 320px;
   min-height: 100%;
-  font-size: 16px;
-  line-height: 1.4;
-  background-color: var(--body-color);
+  font-weight: 400;
+  font-size: var(--font-size);
+  line-height: 1.2;
+  color: var(--text-color);
 }
 
 img {
+  display: block;
   height: auto;
   max-width: 100%;
   object-fit: cover;
@@ -80,36 +82,8 @@ a {
   clip: rect(0 0 0 0);
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
-}
-
-.custom-container {
-  margin-left: auto;
-  max-width: var(--custom-container-width);
-
-  @include small-desktop {
-    margin-left: 305px;
-  }
-
-  @include tablet {
-    margin-left: 280px;
-  }
-
-  @include mobile {
-    margin-left: auto;
-    width: 100%;
-  }
-}
-
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
-}
-
-.centered {
-  text-align: center;
 }
 
 .dis-scroll {

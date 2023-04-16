@@ -1,0 +1,70 @@
+.feature {
+  padding-left: 105px;
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__vitamine {
+    position: absolute;
+    left: -97px;
+    bottom: 0;
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 100px;
+    letter-spacing: -5px;
+    text-shadow: -14px -10px 0 #ee6b372c;
+    color: var(--accent-color);
+
+    span {
+      font-size: 40px;
+    }
+
+    @include tablet {
+      position: unset;
+      left: unset;
+      bottom: unset;
+      font-size: 60px;
+
+      span {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 25px;
+    font-size: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      background-color: var(--accent-color);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include tablet {
+    padding-left: 0;
+  }
+}

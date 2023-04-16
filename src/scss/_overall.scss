@@ -1,0 +1,21 @@
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.btn {
+
+}
+
+.title {
+  font-weight: 700;
+  font-size: var(--title-fz);
+  color: var(--title-color);
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: var(--subtitle-fz);
+  text-transform: uppercase;
+}

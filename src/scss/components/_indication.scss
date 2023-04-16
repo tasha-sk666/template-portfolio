@@ -1,0 +1,53 @@
+.indication {
+  border: 10px solid var(--light-bg-color);
+  border-radius: 500px;
+  background-image: url("../img/indication-bg.png");
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &__container {
+    padding-top: var(--small-section-offset);
+    padding-bottom: var(--small-section-offset);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: unset;
+    color: var(--accent-color);
+  }
+
+  &__list {
+    column-count: 2;
+    gap: 40px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 30px;
+    font-size: var(--body-fz);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 22px;
+      height: 22px;
+      background-image: url("../img/neuron.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

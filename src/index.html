@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="page" data-theme="light">
+<html lang="ru" class="page">
 
 @include('partials/head.html')
 
 <body class="page__body">
-  @include('partials/preloader.html')
+  <!-- @include('partials/preloader.html') -->
   <div class="site-container">
-    <h1 class="visually-hidden">Name Frontend developer & UI/UX Designer</h1>
     @include('partials/header.html')
-    @include('partials/sidebar.html')
-    @include('partials/person.html')
     <main>
       @include('partials/hero.html')
+      @include('partials/info.html')
       @include('partials/about.html')
-      @include('partials/resume.html')
-      @include('partials/services.html')
-      @include('partials/portfolio.html')
-      @include('partials/testimonial.html')
+      @include('partials/indication.html')
+      @include('partials/stores.html')
     </main>
   </div>
 </body>

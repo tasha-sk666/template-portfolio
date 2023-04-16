@@ -1,0 +1,20 @@
+.logo {
+  position: relative;
+  display: block;
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 32px);
+  color: var(--light-color);
+
+  &__icon {
+    position: absolute;
+    right: -20px;
+    top: -5px;
+    width: 20px;
+    height: 20px;
+
+    @include tablet {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

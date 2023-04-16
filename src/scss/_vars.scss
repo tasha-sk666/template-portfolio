@@ -1,60 +1,35 @@
 @import "mixins";
 
 :root {
-  --font-family: "Inter", sans-serif;
-  --font-xs: 12px;
-  --font-s: 14px;
-  --font-m: 16px;
-  --font-l: 24px;
-  --font-xl: 48px;
-  --content-width: 1170px;
-  --container-offset: 75px;
+  --font-family: "OpenSans", sans-serif;
+  --body-fz: 20px;
+  --title-fz: calc(var(--body-fz) * 2.5);
+  --subtitle-fz: calc(var(--body-fz) * 1.25);
+  --content-width: 1190px;
+  --container-offset: 45px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-  --custom-container-width: 770px;
-  --section-offset: 90px;
-  --title-offset: 50px;
-  --border-radius: 30px;
-  --accent-color: #98a4f6;
-  --body-color: #212529;
-  --tooltip-bg: #414141;
-  --tooltip-text: #fff;
-  --tag-bg: #fff;
-  --tag-text: #212529;
-  --border-color: #999;
-  --circle-color: #fff;
-  --btn-text: #fff;
-  --sidebar-bg: #212529;
-  --maintext-color: #fff;
-  --subtext-color: #999;
-  --icon-fill: #fff;
-  --icon-fill-muted: #999;
-}
-
-:root[data-theme="light"] {
-  --accent-color: #7b84c4;
-  --body-color: #fff;
-  --tooltip-bg: #eceaea;
-  --tooltip-text: #212529;
-  --tag-bg: #fff;
-  --tag-text: #212529;
-  --border-color: #4e4e4e;
-  --circle-color: #212529;
-  --sidebar-bg: #fff;
-  --maintext-color: #212529;
-  --subtext-color: #4e4e4e;
-  --icon-fill: #212529;
-  --icon-fill-muted: #4e4e4e;
-}
-
-@include small-desktop {
-  :root {
-    --section-offset: 50px;
-    --title-offset: 30px;
-  }
+  --section-offset: 100px;
+  --small-section-offset: 50px;
+  --border-radius: 20px;
+  --accent-color: #ee6b37;
+  --light-bg-color: #f5f5f5;
+  --light-color: #fff;
+  --title-color: #8c8c8c;
+  --text-color: #343434;
 }
 
 @include tablet {
   :root {
+    --body-fz: 18px;
+    --container-offset: 25px;
+    --section-offset: 50px;
+    --small-section-offset: 50px;
+  }
+}
+
+@include mobile {
+  :root {
+    --body-fz: 16px;
     --container-offset: 15px;
   }
 }
